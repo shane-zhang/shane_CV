@@ -1,0 +1,201 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com 
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+% GENERAL NOTE:  There may be some notes specific to myself.  If you're only interested in my LaTeX source or it doesn't make sense, please disregard it.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-------------	----------------------------------------------
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{CJKutf8}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=mygreylink     % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.30}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{\href{http://svr6.haohaizi.us/}{\LARGE 张潇}} & \href{mailto:zx0319@gmail.com}{zx0319@gmail.com}\\
+	{\footnotesize \texttt{\colorbox{yellow}{[20120903 version.]}}} & \href{http://svr6.haohaizi.us}{http://svr6.haohaizi.us} \\
+	\end{tabular*}
+\\
+\vspace{0.1in}}
+
+% CHANGE HEADER SOURCE HERE
+\mywebheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{教育背景}
+	\begin{itemize}
+		\item
+			\ressubheading{\href{http://www.xjtu.edu.cn}{Xi'an Jiaotong University}}{Xi'an,China}{\href{http://www.cs.xjtu.edu.cn}{计算机科学与技术};}{Sep. 2009 -- Jan. 2012}
+			
+		\item
+			\ressubheading{\href{http://www.cuhk.edu.hk}{The Chinese University of Hong Kong}}{Hong Kong,China SAR}{{国际亚洲学习项目};}{Jan. 2012 -- Jun. 2012}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem
+					{\textbf{Key Courses:}
+						{Computer Design},
+						{Introduction to Java},
+						{Software Engineering},
+						{Computer Networks},
+						{Web Programming and Security},
+						{Wireless Transmission System},
+					}
+				\end{itemize}
+			}
+	\end{itemize} % End Education list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{实习经历}
+	\begin{itemize}
+		\item 
+			\ressubheading{\href{http://eie.xjtu.edu.cn/}{电子信息工程学院}}{西安交通大学}{Windows系统内核工程师}{Jun. 2012 -- Aug. 2012}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{音频媒体回放;}
+					\resitem{多媒体回放延迟内核优化;}
+					\resitem{USB总线过滤驱动构建.}
+				\end{itemize}
+				}
+		\item 
+			\ressubheading{\href{http://nskeylab.xjtu.edu.cn/}{智网教育部重点实验室}}{Xi'an Jiaotong University}{软件工程师}{Jun. 2010 -- Aug. 2010}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{参加973项目组;}
+					\resitem{开发涉及 \textbf{网络舆情};}
+					\resitem{维护重要服务器.}
+				\end{itemize}
+				}
+		\item
+			\ressubheading{\href{http://nic.xjtu.edu.cn}{信息与网络中心}}{Xi'an Jiaotong University}{兼职网络管理员}{Nov. 2010 -- Dec. 2011}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{管理改善校园网络;}
+					\resitem{协助安装部署IPv6.}
+				\end{itemize}
+          		}
+	\end{itemize}
+	
+\resheading{项目经验}
+	\begin{itemize}
+		\item 
+			\ressubheading{板结构在高频激励下能量响应的解析解计算}{振动与噪声控制工程研究所}{数值计算与优化}{May. 2012 -- Jun. 2012}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{使用Matlab构建了程序;}
+					\resitem{对计算时间以及占用内存优化;}
+					\resitem{优化前, 算30阶双重级数的解析解,2*8核至强处理器,每个点需要算15小时, 高于30阶内存溢出（80G内存）无法计算;}
+					\resitem{优化后,可同时计算多个前100阶双重级的解析解,每个点只需要10个小时;}
+					\resitem{https://github.com/shane-Git/ExactSoulvsEFEASoulofPlate}
+				\end{itemize}
+				}
+		\item 
+			\ressubheading{WinNT的USB过滤驱动}{西安交通大学电信学院}{Windows系统内核程序员}{Jun. 2012 -- Aug. 2012}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{截取操作系统与USB总线之间交换的数据;}
+					\resitem{研究USB设备与操作系统之间的交互.}
+					\resitem{https://github.com/shane-Git/NewClassSystem/tree/master/FilterDriver}
+				\end{itemize}
+				}
+		\item 
+			\ressubheading{音频回放优化}{西安交通大学电信学院}{Windows系统内核程序员}{Jun. 2012 -- Aug. 2012}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{基于Win7的DirectShow;}
+					\resitem{尝试了应用层以及内核层的多种filter.}
+					\resitem{https://github.com/shane-Git/NewClassSystem/tree/master/DirectShow}
+				\end{itemize}
+				}
+		\item 
+			\ressubheading{\href{http://svr6.haohaizi.us/}{服务器维护与运营}}{BuyVM@US}{Owner of VM server}{Jun. 2010 -- NOW}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{小型虚拟Debain系统;}
+					\resitem{对境内提供OpenVPN服务;}
+					\resitem{提供国内公网IPv4与教育网IPv6链路.}
+				\end{itemize}
+				}
+		\item
+			\ressubheading{C++0x标准翻译项目}{Public Group Leading by imcc(MS\_MVP)}{技术类翻译} {Feb. 2011 -- Jun. 2011}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{国内唯一经过官方授权的标准翻译组织;}
+					\resitem{翻译最新C++标准的相关资料.}
+				\end{itemize}
+          		}
+	\end{itemize}	
+	
+\resheading{荣誉}
+	\begin{itemize}
+		\item
+			\ressubheading{全年总评}{Xi'an Jiaotong University}{优秀学生}{Year of 2011}
+		\item
+			\ressubheading{Intel第三届软件开发邀请赛}{Intel .Inc}{团队奖}{Year of 2011}
+		\item
+			\ressubheading{社会实践}{Xi'an Jiaotong University}{先进个人}{Year of 2011}
+		\item
+			\ressubheading{全年总评}{Xi'an Jiaotong University}{"思源"奖学金}{Year of 2011}
+		\item
+			\ressubheading{全年总评}{Xi'an Jiaotong University}{"思源"奖学金}{Year of 2010}
+		\end{itemize}
+	
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{技能}
+	\begin{description}
+		\item[编程语言:] { \footnotesize C/C++,Java,Assembly(x86/MIPS),MFC,LaTeX,HTML, CSS,JavaScript,AJAX,PHP}
+		\item[操作系统:] { \footnotesize Debian Linux,Cisco IOS,Windows 9x-svr2008II,Virtualization of Windows \& Linux}
+		\item[开发环境:]{\footnotesize {MS Visual Studio};{ModelSIM};{Eclipse};{NetBeans};{Office Suites};{TexMaker}}  
+	\end{description} % End Skills list
+\end{CJK}
+\end{document}
